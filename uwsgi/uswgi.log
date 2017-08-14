@@ -1,85 +1,422 @@
-*** Starting uWSGI 2.0.15 (64bit) on [Thu Aug 10 21:51:29 2017] ***
-compiled with version: 5.4.0 20160609 on 02 July 2017 10:50:23
-os: Linux-4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016
-nodename: ubuntu
+*** Starting uWSGI 2.0.15 (64bit) on [Sat Aug 12 04:43:16 2017] ***
+compiled with version: 5.4.0 20160609 on 11 August 2017 06:26:25
+os: Linux-2.6.32-042stab123.3 #1 SMP Fri May 5 12:29:05 MSK 2017
+nodename: localhost
 machine: x86_64
 clock source: unix
-pcre jit disabled
-detected number of CPU cores: 3
-current working directory: /home/python/Desktop/blog/uwsgi
+detected number of CPU cores: 1
+current working directory: /home/eason/blog_trial/uwsgi
 writing pidfile to uwsgi.pid
-detected binary path: /home/python/.virtualenvs/django_py3/bin/uwsgi
-chdir() to /home/python/Desktop/blog/eason.github.io
-your processes number limit is 5815
+detected binary path: /home/eason/.virtualenvs/django_py3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/eason/blog_trial/eason.github.io
+your processes number limit is 256167
 your memory page size is 4096 bytes
 detected max file descriptor number: 1024
 lock engine: pthread robust mutexes
 thunder lock: disabled (you can enable it with --thunder-lock)
-uwsgi socket 0 bound to TCP address 127.0.0.1:9999 fd 3
+bind(): Permission denied [core/socket.c line 769]
+*** Starting uWSGI 2.0.15 (64bit) on [Sat Aug 12 04:44:02 2017] ***
+compiled with version: 5.4.0 20160609 on 11 August 2017 06:26:25
+os: Linux-2.6.32-042stab123.3 #1 SMP Fri May 5 12:29:05 MSK 2017
+nodename: localhost
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/eason/blog_trial/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /home/eason/.virtualenvs/django_py3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/eason/blog_trial/eason.github.io
+your processes number limit is 256167
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:9999 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:34916 (port auto-assigned) fd 3
 Python version: 3.5.2 (default, Nov 17 2016, 17:05:23)  [GCC 5.4.0 20160609]
-Set PythonHome to /home/python/.virtualenvs/django_py3/
-Python main interpreter initialized at 0xa7e0e0
+Set PythonHome to /home/eason/.virtualenvs/django_py3/
+Python main interpreter initialized at 0x9533a0
 python threads support enabled
 your server socket listen backlog is limited to 100 connections
 your mercy for graceful operations on workers is 60 seconds
-mapped 415360 bytes (405 KB) for 8 cores
+mapped 415280 bytes (405 KB) for 8 cores
 *** Operational MODE: preforking+threaded ***
-added /home/python/.virtualenvs/django_py3/lib/python3.5/site-packages/ to pythonpath.
-WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xa7e0e0 pid: 4012 (default app)
+added /home/eason/.virtualenvs/django_py3/lib/python3.5/site-packages/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x9533a0 pid: 481 (default app)
 *** uWSGI is running in multiple interpreter mode ***
-spawned uWSGI master process (pid: 4012)
-spawned uWSGI worker 1 (pid: 4016, cores: 2)
-spawned uWSGI worker 2 (pid: 4017, cores: 2)
-spawned uWSGI worker 3 (pid: 4019, cores: 2)
-spawned uWSGI worker 4 (pid: 4020, cores: 2)
-[pid: 4019|app: 0|req: 1/1] 127.0.0.1 () {42 vars in 664 bytes} [Thu Aug 10 21:52:37 2017] GET / => generated 74 bytes in 66 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
-[pid: 4017|app: 0|req: 1/2] 127.0.0.1 () {42 vars in 686 bytes} [Thu Aug 10 21:52:42 2017] GET /index_temp/ => generated 6668 bytes in 125 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
-[pid: 4019|app: 0|req: 2/3] 127.0.0.1 () {42 vars in 676 bytes} [Thu Aug 10 21:53:27 2017] GET /index_ => generated 80 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
-...brutally killing workers...
-Gracefully killing worker 1 (pid: 4016)...
-Gracefully killing worker 4 (pid: 4020)...
-Gracefully killing worker 3 (pid: 4019)...
-Gracefully killing worker 2 (pid: 4017)...
+spawned uWSGI master process (pid: 481)
+spawned uWSGI worker 1 (pid: 485, cores: 2)
+spawned uWSGI worker 2 (pid: 486, cores: 2)
+spawned uWSGI worker 3 (pid: 487, cores: 2)
+spawned uWSGI worker 4 (pid: 488, cores: 2)
+spawned uWSGI http 1 (pid: 489)
+[pid: 488|app: 0|req: 1/1] 127.0.0.1 () {32 vars in 358 bytes} [Sat Aug 12 16:44:52 2017] GET / => generated 27 bytes in 31 msecs (HTTP/1.1 500) 2 headers in 92 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 489)
 worker 1 buried after 1 seconds
 worker 2 buried after 1 seconds
 worker 3 buried after 1 seconds
 worker 4 buried after 1 seconds
-binary reloading uWSGI...
-chdir() to /home/python/Desktop/blog/uwsgi
-closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
-found fd 3 mapped to socket 0 (127.0.0.1:9999)
-running /home/python/.virtualenvs/django_py3/bin/uwsgi
-[uWSGI] getting INI configuration from uwsgi.ini
-*** Starting uWSGI 2.0.15 (64bit) on [Thu Aug 10 22:36:06 2017] ***
-compiled with version: 5.4.0 20160609 on 02 July 2017 10:50:23
-os: Linux-4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016
-nodename: ubuntu
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.15 (64bit) on [Sat Aug 12 04:46:30 2017] ***
+compiled with version: 5.4.0 20160609 on 11 August 2017 06:26:25
+os: Linux-2.6.32-042stab123.3 #1 SMP Fri May 5 12:29:05 MSK 2017
+nodename: localhost
 machine: x86_64
 clock source: unix
-pcre jit disabled
-detected number of CPU cores: 3
-current working directory: /home/python/Desktop/blog/uwsgi
-detected binary path: /home/python/.virtualenvs/django_py3/bin/uwsgi
-chdir() to /home/python/Desktop/blog/eason.github.io
-your processes number limit is 5815
+detected number of CPU cores: 1
+current working directory: /home/eason/blog_trial/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /home/eason/.virtualenvs/django_py3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/eason/blog_trial/eason.github.io
+your processes number limit is 256167
 your memory page size is 4096 bytes
 detected max file descriptor number: 1024
 lock engine: pthread robust mutexes
 thunder lock: disabled (you can enable it with --thunder-lock)
-uwsgi socket 0 inherited INET address 127.0.0.1:9999 fd 3
+uWSGI http bound on 127.0.0.1:9999 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:39349 (port auto-assigned) fd 3
 Python version: 3.5.2 (default, Nov 17 2016, 17:05:23)  [GCC 5.4.0 20160609]
-Set PythonHome to /home/python/.virtualenvs/django_py3/
-Python main interpreter initialized at 0x197aaf0
+Set PythonHome to /home/eason/.virtualenvs/django_py3/
+Python main interpreter initialized at 0x8633a0
 python threads support enabled
 your server socket listen backlog is limited to 100 connections
 your mercy for graceful operations on workers is 60 seconds
-mapped 415360 bytes (405 KB) for 8 cores
+mapped 415280 bytes (405 KB) for 8 cores
 *** Operational MODE: preforking+threaded ***
-added /home/python/.virtualenvs/django_py3/lib/python3.5/site-packages/ to pythonpath.
-WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x197aaf0 pid: 4012 (default app)
+added /home/eason/.virtualenvs/django_py3/lib/python3.5/site-packages/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x8633a0 pid: 526 (default app)
 *** uWSGI is running in multiple interpreter mode ***
-gracefully (RE)spawned uWSGI master process (pid: 4012)
-spawned uWSGI worker 1 (pid: 4534, cores: 2)
-spawned uWSGI worker 2 (pid: 4535, cores: 2)
-spawned uWSGI worker 3 (pid: 4536, cores: 2)
-spawned uWSGI worker 4 (pid: 4538, cores: 2)
+spawned uWSGI master process (pid: 526)
+spawned uWSGI worker 1 (pid: 530, cores: 2)
+spawned uWSGI worker 2 (pid: 531, cores: 2)
+spawned uWSGI worker 3 (pid: 532, cores: 2)
+spawned uWSGI worker 4 (pid: 533, cores: 2)
+spawned uWSGI http 1 (pid: 534)
+[pid: 532|app: 0|req: 1/1] 127.0.0.1 () {32 vars in 358 bytes} [Sat Aug 12 16:46:50 2017] GET / => generated 184562 bytes in 186 msecs (HTTP/1.1 500) 2 headers in 92 bytes (1 switches on core 0)
+[uwsgi-http key: 127.0.0.1:9999 client_addr: 127.0.0.1 client_port: 23724] hr_read(): Connection reset by peer [plugins/http/http.c line 916]
+[pid: 532|app: 0|req: 2/2] 127.0.0.1 () {32 vars in 358 bytes} [Sat Aug 12 16:48:00 2017] GET / => generated 184562 bytes in 129 msecs (HTTP/1.1 500) 2 headers in 92 bytes (1 switches on core 1)
+[pid: 530|app: 0|req: 1/3] 127.0.0.1 () {32 vars in 358 bytes} [Sat Aug 12 16:48:15 2017] GET / => generated 184562 bytes in 146 msecs (HTTP/1.1 500) 2 headers in 92 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.15 (64bit) on [Sat Aug 12 05:45:06 2017] ***
+compiled with version: 5.4.0 20160609 on 11 August 2017 06:26:25
+os: Linux-2.6.32-042stab123.3 #1 SMP Fri May 5 12:29:05 MSK 2017
+nodename: localhost
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/eason/blog_trial/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /home/eason/.virtualenvs/django_py3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/eason/blog_trial/eason.github.io
+your processes number limit is 256167
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:9999).
+bind(): Address already in use [core/socket.c line 769]
+Sat Aug 12 17:47:56 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Aug 12 17:47:56 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Aug 12 17:47:56 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Aug 12 17:47:56 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Aug 12 17:47:56 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Aug 12 17:47:56 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Aug 12 17:47:56 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Sat Aug 12 17:47:56 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.15 (64bit) on [Sat Aug 12 05:48:37 2017] ***
+compiled with version: 5.4.0 20160609 on 11 August 2017 06:26:25
+os: Linux-2.6.32-042stab123.3 #1 SMP Fri May 5 12:29:05 MSK 2017
+nodename: localhost
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/eason/blog_trial/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /home/eason/.virtualenvs/django_py3/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/eason/blog_trial/eason.github.io
+your processes number limit is 256167
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 23.106.154.62:9999 fd 3
+Python version: 3.5.2 (default, Nov 17 2016, 17:05:23)  [GCC 5.4.0 20160609]
+Set PythonHome to /home/eason/.virtualenvs/django_py3/
+Python main interpreter initialized at 0x2517dd0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 415280 bytes (405 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /home/eason/.virtualenvs/django_py3/lib/python3.5/site-packages/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x2517dd0 pid: 10484 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 10484)
+spawned uWSGI worker 1 (pid: 10488, cores: 2)
+spawned uWSGI worker 2 (pid: 10490, cores: 2)
+spawned uWSGI worker 3 (pid: 10492, cores: 2)
+spawned uWSGI worker 4 (pid: 10494, cores: 2)
+[pid: 10492|app: 0|req: 1/1] 211.103.136.242 () {42 vars in 719 bytes} [Sat Aug 12 17:48:49 2017] GET / => generated 4453 bytes in 126 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 1/2] 211.103.136.242 () {40 vars in 693 bytes} [Sat Aug 12 17:49:21 2017] GET / => generated 4453 bytes in 105 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 2/3] 101.226.33.238 () {38 vars in 611 bytes} [Sat Aug 12 17:49:31 2017] GET / => generated 4453 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10492|app: 0|req: 2/4] 101.226.125.16 () {40 vars in 660 bytes} [Sat Aug 12 17:49:37 2017] GET / => generated 4453 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10492|app: 0|req: 3/5] 101.226.33.239 () {40 vars in 657 bytes} [Sat Aug 12 17:57:23 2017] GET / => generated 4453 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 3/6] 112.65.190.222 () {40 vars in 742 bytes} [Sat Aug 12 17:57:24 2017] GET / => generated 4453 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 4/7] 14.17.37.143 () {44 vars in 1085 bytes} [Sat Aug 12 18:30:58 2017] GET /?nsukey=2S6iLCGrivRVbmXrDnUfGB0%2BXVDqJVv%2FFl5G3MnrihMS%2Fw8lAMhxOBxpBdMHBVBTMfUgiGAiQpCWdof0f9e4FMPgSDuwJoiual6kpmjO5bBVDmSTXqau9ZOEjYTFAiDPrp80E7wlUdGZCPdtHlhPs7MDYvTTrv7n0vg2idjQhkU5Gi1TBxL9Uxzvovh9r6uK => generated 4453 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10492|app: 0|req: 4/8] 183.232.90.143 () {40 vars in 703 bytes} [Sat Aug 12 18:30:59 2017] GET / => generated 4453 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 5/9] 163.177.94.120 () {40 vars in 703 bytes} [Sat Aug 12 18:30:59 2017] GET / => generated 4453 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10492|app: 0|req: 5/10] 113.108.11.52 () {42 vars in 1182 bytes} [Sat Aug 12 18:30:59 2017] GET /?nsukey=2S6iLCGrivRVbmXrDnUfGB0%2BXVDqJVv%2FFl5G3MnrihMS%2Fw8lAMhxOBxpBdMHBVBTMfUgiGAiQpCWdof0f9e4FMPgSDuwJoiual6kpmjO5bBVDmSTXqau9ZOEjYTFAiDPrp80E7wlUdGZCPdtHlhPs7MDYvTTrv7n0vg2idjQhkU5Gi1TBxL9Uxzvovh9r6uK => generated 4453 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10488|app: 0|req: 1/11] 183.232.120.37 () {40 vars in 703 bytes} [Sat Aug 12 18:31:04 2017] GET / => generated 4453 bytes in 28 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 6/12] 183.61.51.226 () {42 vars in 1252 bytes} [Sat Aug 12 18:31:04 2017] GET /?nsukey=2S6iLCGrivRVbmXrDnUfGB0%2BXVDqJVv%2FFl5G3MnrihMS%2Fw8lAMhxOBxpBdMHBVBTMfUgiGAiQpCWdof0f9e4FMPgSDuwJoiual6kpmjO5bBVDmSTXqau9ZOEjYTFAiDPrp80E7wlUdGZCPdtHlhPs7MDYvTTrv7n0vg2idjQhkU5Gi1TBxL9Uxzvovh9r6uK => generated 4453 bytes in 8 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10488|app: 0|req: 2/13] 183.232.120.37 () {40 vars in 703 bytes} [Sat Aug 12 18:31:05 2017] GET / => generated 4453 bytes in 10 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10492|app: 0|req: 6/14] 101.226.89.119 () {38 vars in 1057 bytes} [Sat Aug 12 18:31:07 2017] GET /?nsukey=2S6iLCGrivRVbmXrDnUfGB0%2BXVDqJVv%2FFl5G3MnrihMS%2Fw8lAMhxOBxpBdMHBVBTMfUgiGAiQpCWdof0f9e4FMPgSDuwJoiual6kpmjO5bBVDmSTXqau9ZOEjYTFAiDPrp80E7wlUdGZCPdtHlhPs7MDYvTTrv7n0vg2idjQhkU5Gi1TBxL9Uxzvovh9r6uK => generated 4453 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10490|app: 0|req: 1/15] 101.226.66.192 () {38 vars in 1072 bytes} [Sat Aug 12 18:31:08 2017] GET /?nsukey=2S6iLCGrivRVbmXrDnUfGB0%2BXVDqJVv%2FFl5G3MnrihMS%2Fw8lAMhxOBxpBdMHBVBTMfUgiGAiQpCWdof0f9e4FMPgSDuwJoiual6kpmjO5bBVDmSTXqau9ZOEjYTFAiDPrp80E7wlUdGZCPdtHlhPs7MDYvTTrv7n0vg2idjQhkU5Gi1TBxL9Uxzvovh9r6uK => generated 4453 bytes in 29 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 7/16] 36.102.208.93 () {40 vars in 710 bytes} [Sat Aug 12 18:31:19 2017] GET /icons/ubuntu-logo.png => generated 2755 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 10492|app: 0|req: 7/17] 36.102.208.84 () {40 vars in 743 bytes} [Sat Aug 12 18:31:38 2017] GET / => generated 4453 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10490|app: 0|req: 2/18] 36.102.208.93 () {40 vars in 677 bytes} [Sat Aug 12 18:31:46 2017] GET / => generated 4453 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 8/19] 104.192.74.23 () {44 vars in 765 bytes} [Sat Aug 12 18:36:06 2017] GET /robots.txt => generated 2722 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 9/20] 104.192.74.23 () {44 vars in 734 bytes} [Sat Aug 12 18:36:06 2017] GET / => generated 4453 bytes in 8 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 10/21] 104.192.74.23 () {36 vars in 465 bytes} [Sat Aug 12 18:36:06 2017] GET / => generated 4453 bytes in 12 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10492|app: 0|req: 8/22] 104.192.74.23 () {44 vars in 765 bytes} [Sat Aug 12 18:36:07 2017] GET /about.html => generated 2722 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 10492|app: 0|req: 9/23] 104.192.74.23 () {44 vars in 771 bytes} [Sat Aug 12 18:36:07 2017] GET /contact.html => generated 2728 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 10492|app: 0|req: 10/24] 104.192.74.23 () {36 vars in 485 bytes} [Sat Aug 12 18:36:07 2017] GET /about.html => generated 2722 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 10488|app: 0|req: 3/25] 104.192.74.23 () {36 vars in 489 bytes} [Sat Aug 12 18:36:08 2017] GET /contact.html => generated 2728 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10488|app: 0|req: 4/26] 107.182.184.23 () {28 vars in 324 bytes} [Sat Aug 12 18:46:16 2017] GET / => generated 4453 bytes in 7 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 11/27] 139.162.124.167 () {34 vars in 394 bytes} [Sat Aug 12 19:38:20 2017] GET / => generated 4453 bytes in 10 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10492|app: 0|req: 11/28] 107.182.184.23 () {28 vars in 324 bytes} [Sat Aug 12 19:46:10 2017] GET / => generated 4453 bytes in 24 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10492|app: 0|req: 12/29] 107.182.184.23 () {28 vars in 324 bytes} [Sat Aug 12 20:46:12 2017] GET / => generated 4453 bytes in 26 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 12/30] 101.90.125.75 () {40 vars in 819 bytes} [Sat Aug 12 20:50:35 2017] GET / => generated 4453 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 13/31] 179.209.254.139 () {42 vars in 631 bytes} [Sat Aug 12 21:32:01 2017] GET / => generated 4453 bytes in 8 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Resource temporarily unavailable [proto/uwsgi.c line 40]
+[pid: 10488|app: 0|req: 5/32] 107.182.184.23 () {28 vars in 324 bytes} [Sat Aug 12 21:46:10 2017] GET / => generated 4453 bytes in 9 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 14/33] 191.96.249.73 () {28 vars in 315 bytes} [Sat Aug 12 22:07:39 2017] GET / => generated 4453 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 15/34] 211.103.136.242 () {42 vars in 724 bytes} [Sat Aug 12 22:34:44 2017] GET / => generated 4453 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10492|app: 0|req: 13/35] 107.182.184.23 () {28 vars in 324 bytes} [Sat Aug 12 22:46:02 2017] GET / => generated 4453 bytes in 6 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 16/36] 163.172.4.153 () {42 vars in 575 bytes} [Sat Aug 12 23:05:39 2017] GET / => generated 4453 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10490|app: 0|req: 3/37] 107.182.184.23 () {28 vars in 324 bytes} [Sat Aug 12 23:46:05 2017] GET / => generated 4453 bytes in 10 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 17/38] 141.8.144.128 () {34 vars in 480 bytes} [Sun Aug 13 00:05:22 2017] GET /robots.txt => generated 2718 bytes in 13 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 18/39] 141.8.144.128 () {38 vars in 514 bytes} [Sun Aug 13 00:05:26 2017] GET / => generated 4453 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10488|app: 0|req: 6/40] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 00:42:22 2017] GET / => generated 4453 bytes in 8 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10488|app: 0|req: 7/41] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 01:42:17 2017] GET / => generated 4453 bytes in 5 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 19/42] 141.8.144.117 () {34 vars in 484 bytes} [Sun Aug 13 02:19:17 2017] GET /robots.txt => generated 2722 bytes in 9 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 20/43] 141.8.144.117 () {38 vars in 518 bytes} [Sun Aug 13 02:19:21 2017] GET / => generated 4453 bytes in 19 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10490|app: 0|req: 4/44] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 02:42:13 2017] GET / => generated 4453 bytes in 7 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10492|app: 0|req: 14/45] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 03:42:13 2017] GET / => generated 4453 bytes in 34 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 21/46] 95.31.20.59 () {26 vars in 281 bytes} [Sun Aug 13 03:56:56 2017] GET / => generated 4453 bytes in 21 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10490|app: 0|req: 5/47] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 04:42:07 2017] GET / => generated 4453 bytes in 12 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10488|app: 0|req: 8/48] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 05:42:03 2017] GET / => generated 4453 bytes in 177 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10490|app: 0|req: 6/49] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 06:42:05 2017] GET / => generated 4453 bytes in 46 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 22/50] 106.11.242.247 () {40 vars in 632 bytes} [Sun Aug 13 07:33:26 2017] GET / => generated 4453 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10490|app: 0|req: 7/51] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 07:42:01 2017] GET / => generated 4453 bytes in 9 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 23/52] 140.205.205.9 () {36 vars in 551 bytes} [Sun Aug 13 08:03:31 2017] GET / => generated 4453 bytes in 8 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Resource temporarily unavailable [proto/uwsgi.c line 40]
+[pid: 10494|app: 0|req: 24/53] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 08:42:05 2017] GET / => generated 4453 bytes in 38 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 25/54] 110.19.183.209 () {40 vars in 678 bytes} [Sun Aug 13 09:38:54 2017] GET / => generated 4453 bytes in 8 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10494|app: 0|req: 26/55] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 09:42:04 2017] GET / => generated 4453 bytes in 7 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 27/56] 216.55.138.168 () {32 vars in 428 bytes} [Sun Aug 13 10:08:41 2017] GET / => generated 4453 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 28/57] 206.225.80.193 () {36 vars in 477 bytes} [Sun Aug 13 10:08:48 2017] HEAD / => generated 0 bytes in 9 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10490|app: 0|req: 8/58] 206.225.80.193 () {30 vars in 336 bytes} [Sun Aug 13 10:08:48 2017] GET / => generated 4453 bytes in 9 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10492|app: 0|req: 15/59] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 10:42:13 2017] GET / => generated 4453 bytes in 195 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Resource temporarily unavailable [proto/uwsgi.c line 40]
+[pid: 10494|app: 0|req: 29/60] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 11:42:16 2017] GET / => generated 4453 bytes in 40 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 30/61] 106.11.226.38 () {40 vars in 635 bytes} [Sun Aug 13 12:17:42 2017] GET / => generated 4453 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10490|app: 0|req: 9/62] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 12:42:08 2017] GET / => generated 4453 bytes in 16 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 31/63] 155.94.89.82 () {30 vars in 378 bytes} [Sun Aug 13 13:39:18 2017] GET / => generated 4453 bytes in 12 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10492|app: 0|req: 16/64] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 13:42:07 2017] GET / => generated 4453 bytes in 17 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10494|app: 0|req: 32/65] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 14:42:05 2017] GET / => generated 4453 bytes in 12 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+-- unavailable modifier requested: 3 --
+-- unavailable modifier requested: 3 --
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Resource temporarily unavailable [proto/uwsgi.c line 40]
+[pid: 10492|app: 0|req: 17/68] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 15:42:06 2017] GET / => generated 4453 bytes in 39 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 33/69] 13.84.157.254 () {34 vars in 459 bytes} [Sun Aug 13 15:56:30 2017] GET / => generated 4453 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10488|app: 0|req: 9/70] 13.84.157.254 () {34 vars in 513 bytes} [Sun Aug 13 15:56:30 2017] GET /wp-includes/wlwmanifest.xml => generated 2769 bytes in 254 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 34/71] 13.84.157.254 () {34 vars in 486 bytes} [Sun Aug 13 15:56:30 2017] GET /xmlrpc.php?rsd => generated 2722 bytes in 28 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 10488|app: 0|req: 10/72] 13.84.157.254 () {34 vars in 459 bytes} [Sun Aug 13 15:56:30 2017] GET / => generated 4453 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 35/73] 13.84.157.254 () {34 vars in 489 bytes} [Sun Aug 13 15:56:30 2017] GET /blog/robots.txt => generated 2733 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 10490|app: 0|req: 10/74] 13.84.157.254 () {34 vars in 469 bytes} [Sun Aug 13 15:56:31 2017] GET /blog/ => generated 2703 bytes in 42 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 10490|app: 0|req: 11/75] 13.84.157.254 () {34 vars in 479 bytes} [Sun Aug 13 15:56:31 2017] GET /wordpress/ => generated 2718 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 10492|app: 0|req: 18/76] 13.84.157.254 () {34 vars in 465 bytes} [Sun Aug 13 15:56:31 2017] GET /wp/ => generated 2697 bytes in 21 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 10492|app: 0|req: 19/77] 141.8.144.128 () {34 vars in 484 bytes} [Sun Aug 13 16:09:41 2017] GET /robots.txt => generated 2722 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 10488|app: 0|req: 11/78] 141.8.144.117 () {34 vars in 480 bytes} [Sun Aug 13 16:13:49 2017] GET /robots.txt => generated 2718 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 10490|app: 0|req: 12/79] 139.162.114.70 () {32 vars in 464 bytes} [Sun Aug 13 16:38:11 2017] GET / => generated 4453 bytes in 10 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10492|app: 0|req: 20/80] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 16:42:10 2017] GET / => generated 4453 bytes in 11 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10492|app: 0|req: 21/81] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 17:42:11 2017] GET / => generated 4453 bytes in 67 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10488|app: 0|req: 12/82] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 18:42:01 2017] GET / => generated 4453 bytes in 30 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 36/83] 212.83.152.183 () {34 vars in 439 bytes} [Sun Aug 13 19:19:13 2017] GET /wp-login.php => generated 2724 bytes in 7 msecs (HTTP/1.0 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 10488|app: 0|req: 13/84] 212.83.152.183 () {34 vars in 461 bytes} [Sun Aug 13 19:19:13 2017] GET /administrator/index.php => generated 2757 bytes in 4 msecs (HTTP/1.0 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 10488|app: 0|req: 14/85] 2.137.102.2 () {36 vars in 434 bytes} [Sun Aug 13 19:33:07 2017] GET / => generated 4453 bytes in 27 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10490|app: 0|req: 13/86] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 19:42:05 2017] GET / => generated 4453 bytes in 19 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 37/87] 177.140.89.43 () {32 vars in 386 bytes} [Sun Aug 13 20:30:35 2017] GET /hndUnblock.cgi => generated 2729 bytes in 12 msecs (HTTP/1.0 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 10488|app: 0|req: 15/88] 177.140.89.43 () {32 vars in 384 bytes} [Sun Aug 13 20:30:36 2017] GET /tmUnblock.cgi => generated 2726 bytes in 4 msecs (HTTP/1.0 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 38/89] 177.140.89.43 () {32 vars in 364 bytes} [Sun Aug 13 20:30:36 2017] GET /moo => generated 2696 bytes in 6 msecs (HTTP/1.0 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 10490|app: 0|req: 14/90] 177.140.89.43 () {32 vars in 358 bytes} [Sun Aug 13 20:30:37 2017] GET / => generated 4453 bytes in 22 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10492|app: 0|req: 22/91] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 20:42:08 2017] GET / => generated 4453 bytes in 13 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10492|app: 0|req: 23/92] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 21:42:15 2017] GET / => generated 4453 bytes in 12 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 39/93] 60.191.38.77 () {38 vars in 609 bytes} [Sun Aug 13 22:40:34 2017] GET / => generated 4453 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10488|app: 0|req: 16/94] 60.191.38.77 () {38 vars in 609 bytes} [Sun Aug 13 22:40:35 2017] GET / => generated 4453 bytes in 10 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10492|app: 0|req: 24/95] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 22:42:22 2017] GET / => generated 4453 bytes in 9 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 40/96] 106.75.106.221 () {38 vars in 633 bytes} [Sun Aug 13 22:58:46 2017] GET / => generated 4453 bytes in 9 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10490|app: 0|req: 15/97] 107.182.184.23 () {28 vars in 324 bytes} [Sun Aug 13 23:42:21 2017] GET / => generated 4453 bytes in 8 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 41/98] 141.8.144.128 () {34 vars in 484 bytes} [Mon Aug 14 00:03:37 2017] GET /robots.txt => generated 2722 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 10488|app: 0|req: 17/99] 141.8.144.128 () {38 vars in 518 bytes} [Mon Aug 14 00:03:41 2017] GET / => generated 4453 bytes in 10 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 42/100] 106.75.22.202 () {38 vars in 636 bytes} [Mon Aug 14 00:07:37 2017] GET / => generated 4453 bytes in 19 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10494|app: 0|req: 43/101] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 00:42:03 2017] GET / => generated 4453 bytes in 8 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 44/102] 141.8.144.117 () {34 vars in 480 bytes} [Mon Aug 14 00:53:45 2017] GET /robots.txt => generated 2718 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 45/103] 141.8.144.117 () {38 vars in 514 bytes} [Mon Aug 14 00:53:49 2017] GET / => generated 4453 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10490|app: 0|req: 16/104] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 01:42:00 2017] GET / => generated 4453 bytes in 11 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+-- unavailable modifier requested: 3 --
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10488|app: 0|req: 18/106] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 02:41:58 2017] GET / => generated 4453 bytes in 33 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10490|app: 0|req: 17/107] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 03:42:02 2017] GET / => generated 4453 bytes in 39 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Resource temporarily unavailable [proto/uwsgi.c line 40]
+[pid: 10494|app: 0|req: 46/108] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 04:42:05 2017] GET / => generated 4453 bytes in 12 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 47/109] 70.42.131.170 () {44 vars in 825 bytes} [Mon Aug 14 04:43:36 2017] GET / => generated 4453 bytes in 10 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 48/110] 52.43.158.57 () {36 vars in 512 bytes} [Mon Aug 14 05:29:53 2017] GET / => generated 4453 bytes in 8 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10492|app: 0|req: 25/111] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 05:42:00 2017] GET / => generated 4453 bytes in 14 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10492|app: 0|req: 26/112] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 06:41:59 2017] GET / => generated 4453 bytes in 22 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 49/113] 188.166.63.71 () {44 vars in 693 bytes} [Mon Aug 14 07:13:55 2017] GET / => generated 4453 bytes in 8 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10488|app: 0|req: 19/114] 162.243.187.126 () {44 vars in 613 bytes} [Mon Aug 14 07:13:55 2017] GET / => generated 4453 bytes in 12 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10488|app: 0|req: 20/115] 79.79.145.14 () {44 vars in 683 bytes} [Mon Aug 14 07:13:55 2017] GET / => generated 4453 bytes in 85 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 50/116] 163.172.223.200 () {44 vars in 653 bytes} [Mon Aug 14 07:13:56 2017] GET / => generated 4453 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10492|app: 0|req: 27/117] 97.74.237.196 () {44 vars in 593 bytes} [Mon Aug 14 07:14:00 2017] GET / => generated 4453 bytes in 9 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 51/118] 106.11.227.102 () {40 vars in 632 bytes} [Mon Aug 14 07:23:42 2017] GET / => generated 4453 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10490|app: 0|req: 18/119] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 07:41:55 2017] GET / => generated 4453 bytes in 11 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Resource temporarily unavailable [proto/uwsgi.c line 40]
+[pid: 10494|app: 0|req: 52/120] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 08:41:59 2017] GET / => generated 4453 bytes in 39 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 53/121] 155.94.89.82 () {30 vars in 378 bytes} [Mon Aug 14 09:08:53 2017] GET / => generated 4453 bytes in 12 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10490|app: 0|req: 19/122] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 09:42:07 2017] GET / => generated 4453 bytes in 113 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 54/123] 54.183.129.156 () {36 vars in 527 bytes} [Mon Aug 14 10:06:27 2017] GET / => generated 4453 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10488|app: 0|req: 21/124] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 10:42:13 2017] GET / => generated 4453 bytes in 13 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10488|app: 0|req: 22/125] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 11:42:07 2017] GET / => generated 4453 bytes in 9 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 55/126] 71.6.202.204 () {32 vars in 470 bytes} [Mon Aug 14 11:58:16 2017] GET / => generated 4453 bytes in 21 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10488|app: 0|req: 23/127] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 12:42:11 2017] GET / => generated 4453 bytes in 39 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 56/128] 106.11.227.33 () {40 vars in 635 bytes} [Mon Aug 14 12:47:32 2017] GET / => generated 4453 bytes in 19 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+-- unavailable modifier requested: 3 --
+-- unavailable modifier requested: 3 --
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10488|app: 0|req: 24/131] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 13:42:14 2017] GET / => generated 4453 bytes in 12 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10490|app: 0|req: 20/132] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 14:42:05 2017] GET / => generated 4453 bytes in 64 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 57/133] 139.162.124.167 () {34 vars in 394 bytes} [Mon Aug 14 15:11:07 2017] GET / => generated 4453 bytes in 179 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Resource temporarily unavailable [proto/uwsgi.c line 40]
+[pid: 10488|app: 0|req: 25/134] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 15:42:08 2017] GET / => generated 4453 bytes in 17 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 58/135] 182.64.180.1 () {30 vars in 343 bytes} [Mon Aug 14 16:14:41 2017] GET / => generated 4453 bytes in 26 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10488|app: 0|req: 26/136] 182.64.180.1 () {28 vars in 338 bytes} [Mon Aug 14 16:14:42 2017] GET /contact.html => generated 2728 bytes in 96 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Resource temporarily unavailable [proto/uwsgi.c line 40]
+[pid: 10490|app: 0|req: 21/137] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 16:42:12 2017] GET / => generated 4453 bytes in 17 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 59/138] 182.64.179.207 () {30 vars in 345 bytes} [Mon Aug 14 17:24:53 2017] GET / => generated 4453 bytes in 25 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10488|app: 0|req: 27/139] 182.64.179.207 () {28 vars in 340 bytes} [Mon Aug 14 17:24:53 2017] GET /contact.html => generated 2728 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Resource temporarily unavailable [proto/uwsgi.c line 40]
+[pid: 10494|app: 0|req: 60/140] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 17:42:03 2017] GET / => generated 4453 bytes in 10 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10488|app: 0|req: 28/141] 141.8.144.128 () {34 vars in 484 bytes} [Mon Aug 14 18:32:13 2017] GET /robots.txt => generated 2722 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 61/142] 141.8.144.128 () {38 vars in 538 bytes} [Mon Aug 14 18:32:17 2017] GET /about.html => generated 2722 bytes in 25 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 62/143] 141.8.144.117 () {38 vars in 542 bytes} [Mon Aug 14 18:32:21 2017] GET /contact.html => generated 2728 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Resource temporarily unavailable [proto/uwsgi.c line 40]
+[pid: 10494|app: 0|req: 63/144] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 18:42:04 2017] GET / => generated 4453 bytes in 39 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Success [proto/uwsgi.c line 40]
+[pid: 10494|app: 0|req: 64/145] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 19:42:02 2017] GET / => generated 4453 bytes in 23 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 65/146] 211.103.136.242 () {40 vars in 693 bytes} [Mon Aug 14 20:37:15 2017] GET / => generated 4453 bytes in 18 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 66/147] 211.103.136.242 () {40 vars in 676 bytes} [Mon Aug 14 20:37:17 2017] GET /favicon.ico => generated 2725 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 67/148] 211.103.136.242 () {40 vars in 693 bytes} [Mon Aug 14 20:40:53 2017] GET / => generated 4455 bytes in 9 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 68/149] 101.226.33.217 () {38 vars in 560 bytes} [Mon Aug 14 20:42:01 2017] GET / => generated 4455 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+uwsgi_proto_uwsgi_parser(): Resource temporarily unavailable [proto/uwsgi.c line 40]
+[pid: 10488|app: 0|req: 29/150] 107.182.184.23 () {28 vars in 324 bytes} [Mon Aug 14 20:42:04 2017] GET / => generated 4455 bytes in 84 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 69/151] 211.103.136.242 () {42 vars in 724 bytes} [Mon Aug 14 20:44:08 2017] GET / => generated 4185 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 70/152] 61.151.226.16 () {40 vars in 659 bytes} [Mon Aug 14 20:44:27 2017] GET / => generated 4185 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 71/153] 211.103.136.242 () {42 vars in 724 bytes} [Mon Aug 14 20:44:51 2017] GET / => generated 4185 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 72/154] 183.67.63.35 () {40 vars in 667 bytes} [Mon Aug 14 20:46:12 2017] GET / => generated 4185 bytes in 8 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10494|app: 0|req: 73/155] 183.67.63.35 () {42 vars in 733 bytes} [Mon Aug 14 20:46:51 2017] GET /contact.html => generated 2728 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 74/156] 211.103.136.242 () {42 vars in 724 bytes} [Mon Aug 14 20:53:10 2017] GET / => generated 4185 bytes in 8 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 10494|app: 0|req: 75/157] 123.59.232.224 () {34 vars in 428 bytes} [Mon Aug 14 21:06:32 2017] GET / => generated 4185 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
